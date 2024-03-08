@@ -1,0 +1,384 @@
+
+
+/* version tel */
+@media (max-width : 850px) {}
+
+/* version ordinateur */
+@media (min-width : 851px) {
+    .parentmain {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 550px;
+        grid-template-rows: repeat(5, 475px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .diplome {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    .EXP-pro {
+        grid-area: 3 / 1 / 6 / 3;
+    }
+
+    .infoperso {
+        grid-area: 1 / 3 / 2 / 4;
+        background: linear-gradient(to right, #ff9595, #ff6780);
+
+    }
+
+    .langues {
+        grid-area: 2 / 3 / 3 / 4;
+        background: linear-gradient(to right, #fc778d, #ffb7c3);
+
+    }
+
+
+
+    .personnalité {
+        grid-area: 3 / 3 / 4 / 4;
+        background: linear-gradient(to right, #ffb7c3, #fc778d);
+
+    }
+
+    .centre-interets {
+        grid-area: 4 / 3 / 5 / 4;
+        background: linear-gradient(to right, #ff6780, #ff9595);
+
+    }
+
+    .social {
+        grid-area: 5 / 3 / 6 / 4;
+        background: linear-gradient(to right, #ffb7c3, #fc778d);
+    }
+}
+
+
+
+/* pour PC et tel  */
+
+H2 {
+    text-align: center;
+}
+
+.nomphoto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nom {
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+}
+
+.titre {
+    text-align: center;
+}
+
+#bouton {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    color: #030ff4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    top: 10px;
+
+}
+
+#bouton:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#bouton:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+#bouton:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+#bouton span {
+    position: absolute;
+    display: block;
+}
+
+/* haut */
+#bouton span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+/* droite */
+#bouton span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+/* bas */
+#bouton span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+#infP {
+    padding: 0.5em;
+}
+
+#per {
+    padding: 0.5em;
+}
+
+
+/* gauche */
+#bouton span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+#HR {
+    border-style: outset;
+    margin: 1em;
+    padding-left:15px;}
+
+#NOHR {
+    margin: 1em;
+    border-style: inset;
+}
+
+.gris {
+    background: rgb(210, 210, 210);
+}
+
+.blanc_casser {
+    background: rgb(175, 175, 175);
+}
+
+
+/* partie tableau  */
+
+#competences {
+    text-align: center;
+}
+
+#SkillBox {
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    width: 95%;
+    height: auto;
+    margin: 40px auto;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+.SkillBar {
+    width: 95%;
+    height: 50px;
+    position: relative;
+    background: rgba(17, 17, 17, .3);
+    margin: 20px;
+}
+
+.Skill-Area {
+    z-index: 1;
+    float: left;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 15px;
+}
+
+.PercentText {
+    z-index: 3;
+    position: absolute;
+    padding-left: 325px;
+    margin-top: 15px;
+    float: right;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
+}
+
+/* logiciel informatique */
+
+
+
+
+/* Container pour skill bars */
+.container {
+  width: 100%; 
+  background-color: #ddd; 
+}
+
+.skills {
+  text-align: right; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  color: white; 
+}
+
+.html {width: 80%; background-color: #f1662a;color:#050801} 
+.css {width: 75%; background-color: #1572b6;color:#050801} 
+.js {width: 30%; background-color: #f7df1e; color:#050801} 
+.Linux {width: 40%; background-color: #ffcc00;color:#050801} 
+.BDD {width: 60%; background-color: #26557c;color:#050801} 
+.php {width: 75%; background-color: #777bb3;color:#050801} 
+.Algo {width: 50%; background-color: #863db1;color:#050801} 
+.Angular {width: 10%; background-color: #c3002f;color:#050801} 
+.VUE {width: 10%; background-color: #23e71d;color:#050801} 
+.Symfony {width: 40%; background-color: #000000;color:#f5f5f5}
+.Wordpress {width: 0%; background-color: #21759b;color:#050801} 
+.Deploiement {width: 0%; background-color: #338174;color:#050801} 
+.securité {width: 0%; background-color: #80808081;color:#050801}  
+.Maquettage {width: 80%; background-color: #fc79df;color:#050801}  
+
+
+
+
+/* fin partie informatique */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.social-container {
+    width: 400px;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all 265ms ease-out;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #00B5F5, #002A8F);
+    transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #00B5F5;
+    background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
